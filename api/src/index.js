@@ -32,18 +32,25 @@ app.post('/matricula', async (req, resp) => {
             nm_turma: turma
              
         }
+
+        if(!isNaN(chamada) == false) {
+            return resp.send({ erro: 'No campo Chamada coloque apenas numeros!' })
+        } 
+        
         if(nome == '' || chamada == '' || curso == '' || turma == '') {
             return resp.send({ erro: 'Você esqueceu de preencher os campos' })
         }
         if(nome.length <= 4 || curso.length <= 4 || turma.length <= 4) {
             return resp.send({ erro: 'Coloque mais que 4 caracteres nos campos abaixo' })
         }
+        
+        
         if(chamada <= 0)
-        return resp.send({ erro: 'Coloque um numero maior que 0' })
-        else if(!chamada == Number) {
-            return resp.send({ erro: 'No campo Chamada coloque apenas numeros' })
-        }
-        else if(p != null && q != null){
+            return resp.send({ erro: 'Coloque um numero maior que 0' })
+
+
+        
+        if(p != null && q != null){
             return resp.send({ erro: 'Aluno ja cadastrado' })
         }
         
