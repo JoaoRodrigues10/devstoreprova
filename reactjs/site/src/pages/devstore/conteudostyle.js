@@ -183,6 +183,7 @@ const ContainerConteudo = styled.div`
     .cxinputs {
         display: flex;
         flex-direction: row;
+        height: auto;
         
     }
 
