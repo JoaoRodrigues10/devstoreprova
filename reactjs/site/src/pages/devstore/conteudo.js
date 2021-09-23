@@ -36,7 +36,7 @@ export default function Conteudo() {
     }
 
     async function inserir() {
-        if (idAlterando == 0) {
+        if (idAlterando === 0) {
             let r = await api.inserir( nome, categoria, precode, precopor, avaliacao,  descricao, estoque, linkimagem)
 
             if (r.erro)
@@ -149,7 +149,7 @@ export default function Conteudo() {
                 <div className="cadrastro">
                     <div className="cab"> 
                     <Barra/>
-                    <div className="titulo-alun"> {idAlterando == 0 ? "Novo Produto" : "Alterando Produto " + idAlterando}</div>
+                    <div className="titulo-alun"> {idAlterando === 0 ? "Novo Produto" : "Alterando Produto " + idAlterando}</div>
                     </div>
                     <div className="cxinputs">
                         <div className="dados">
@@ -163,7 +163,7 @@ export default function Conteudo() {
                             <div className="ds"> Descrição: </div>
                             <textarea type="text" value={descricao} onChange={e => setDescricao(e.target.value)} />  
                         </div>
-                        <div className="botao"> <button onClick={inserir}> {idAlterando == 0 ? "Cadastrar" : "Alterar"} </button> </div>
+                        <div className="botao"> <button onClick={inserir}> {idAlterando === 0 ? "Cadastrar" : "Alterar"} </button> </div>
                     </div>
                 </div> 
                 <div className="listaalunos">
