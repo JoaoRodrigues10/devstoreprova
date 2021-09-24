@@ -93,7 +93,7 @@ export default function Conteudo() {
             ]
         });
     }
-
+    ///odeio o git
     async function editar(item) {
         setNome(item.nm_produto)
         setCategoria(item.ds_categoria)
