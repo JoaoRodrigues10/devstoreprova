@@ -206,7 +206,7 @@ const ContainerConteudo = styled.div`
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 100vh;
+        width: 90vh;
         height: auto;
     }
 
