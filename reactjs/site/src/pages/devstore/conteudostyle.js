@@ -21,7 +21,7 @@ const ContainerConteudo = styled.div`
     }
 
     .lista-tb {
-        width: 145vh;
+        width: 59em;
     }
     .bullet {
         background: rgba(17, 159, 220, 1);
@@ -51,7 +51,7 @@ const ContainerConteudo = styled.div`
     }
 
     .container2 {
-        width: 68em;
+        width: auto;
         background: linear-gradient(0deg, #F5F5F5, #F5F5F5);
         
     }
@@ -122,13 +122,19 @@ const ContainerConteudo = styled.div`
     }
 
     .cabecalho {
-        width: 168vh;
+        
         display: flex;
         flex-direction: row;
         padding: 1em 2em;
         align-items: center;
+        justify-content: space-between;
         background: rgba(255, 255, 255, 1);
 
+    }
+
+    .aaaaaa{
+        display: flex;
+        flex-direction: row;
     }
 
     
@@ -200,14 +206,15 @@ const ContainerConteudo = styled.div`
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 40em;
-        height: 20em;
+        width: 100vh;
+        height: auto;
     }
 
     .nome {
         
         padding-left: 3em;
         margin-right: 3em;
+        padding-bottom: 0.5em;
     }
     .prde {
         padding-left: 0em;
@@ -215,6 +222,7 @@ const ContainerConteudo = styled.div`
     .cat {
         padding-left: 1.4em;
         margin-right: 2em;
+        padding-bottom: 0.5em;
         
     }
     .prpo {
@@ -224,14 +232,16 @@ const ContainerConteudo = styled.div`
     .ava {
         padding-left: 1.5em;
         margin-right: 3.5em;
+        padding-bottom: 0.5em;
        
     }
     .est {
         padding-left: 0em;
     }
     .lm {
-        padding-left: 0.1em;
-        margin-right: 0em;
+        padding-left: 0em;
+        padding-bottom: 0.5em;
+ 
         
     }
 
@@ -239,9 +249,10 @@ const ContainerConteudo = styled.div`
         border: 1px solid rgba(168, 168, 168, 1);
         background: #FFFFFF;
         border-radius: 5px;
-        
+        min-width: 76.5vh;
+        max-width: 76.5vh;
         outline: none;
-        width: 76.5vh;
+        
         height: 6vh;
 
         cursor: text;
@@ -372,9 +383,10 @@ const ContainerConteudo = styled.div`
     table {
         border: 1px solid #E2E2E2;
         border-collapse: collapse;
+        
     }
     th {
-        height: 61.93px;
+        height: 2em;
         text-align: left;
         color: #ffff;
         
@@ -382,7 +394,7 @@ const ContainerConteudo = styled.div`
     }
     td {
         text-align: left;
-        height:  61.93px;
+        height: 3em;
         padding: 0.5em;
         color: #6D6868;
         
