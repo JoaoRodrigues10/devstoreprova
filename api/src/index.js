@@ -120,6 +120,7 @@ app.put('/produto/:id', async (req, resp) => {
     try {
         let id = req.params.id;
 <<<<<<< HEAD
+<<<<<<< HEAD
         let { nome, categoria, precode, precopor, avaliacao,  descricao, estoque, linkimagem } = req.body;
 
         if(nome == '' || categoria == '' || precode == '' || precopor == '' || avaliacao == '' || descricao == '' || estoque == '' || linkimagem == '') {
@@ -149,6 +150,8 @@ app.put('/produto/:id', async (req, resp) => {
             
         let r = await db.tb_produto.update (
 =======
+=======
+>>>>>>> parent of faf8e42 (biiiiiii)
         let { nome, chamada, curso, turma } = req.body;
         let r = await db.tb_matricula.update (
 >>>>>>> faf8e427f6036e447a29e6b84becb8fe8acad573
