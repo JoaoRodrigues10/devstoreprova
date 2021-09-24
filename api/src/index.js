@@ -150,23 +150,6 @@ app.put('/produto/:id', async (req, resp) => {
         let r = await db.tb_produto.update (
 =======
         let { nome, chamada, curso, turma } = req.body;
-
-        if(!isNaN(chamada) == false) {
-            return resp.send({ erro: 'No campo Chamada coloque apenas numeros!' })
-        } 
-        
-        if(nome == '' || chamada == '' || curso == '' || turma == '') {
-            return resp.send({ erro: 'Você esqueceu de preencher os campos' })
-        }
-        if(nome.length <= 4 || curso.length <= 4 || turma.length <= 4) {
-            return resp.send({ erro: 'Coloque mais que 4 caracteres nos campos abaixo' })
-        }
-        
-        
-        if(chamada <= 0)
-            return resp.send({ erro: 'Coloque um numero maior que 0' })
-
-
         let r = await db.tb_matricula.update (
 >>>>>>> faf8e427f6036e447a29e6b84becb8fe8acad573
             {
