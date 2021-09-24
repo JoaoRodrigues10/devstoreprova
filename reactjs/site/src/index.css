@@ -1,9 +1,10 @@
 body {
   margin: 0px;
+  font-family: 'Josefin Sans', sans-serif;
+
 }
 
 * {
   box-sizing: border-box;
-  cursor: default;
+  
 }
-
