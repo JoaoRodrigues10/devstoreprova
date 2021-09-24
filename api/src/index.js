@@ -41,6 +41,7 @@ app.post('/produto', async (req, resp) => {
               
         }
 
+<<<<<<< HEAD
 
         
 
@@ -48,10 +49,19 @@ app.post('/produto', async (req, resp) => {
         
         if(nome == '' || categoria == '' || precode == '' || precopor == '' || avaliacao == '' || descricao == '' || estoque == '' || linkimagem == '') {
             return resp.send({ erro: 'Você Deve de Preencher os Campos' }) 
+=======
+        if(!isNaN(chamada) == false) {
+            return resp.send({ erro: 'No campo Chamada coloque apenas numeros!' })
+        } 
+        
+        if(nome == '' || chamada == '' || curso == '' || turma == '') {
+            return resp.send({ erro: 'Você esqueceu de preencher os campos' })
+>>>>>>> faf8e427f6036e447a29e6b84becb8fe8acad573
         }
         if(nome.length <= 4 || categoria.length <= 4 || descricao.length <= 4 || linkimagem.length <= 4) {
             return resp.send({ erro: 'Coloque mais que 4 caracteres nos campos abaixo' })
         }
+<<<<<<< HEAD
 
         if(!isNaN(precopor) == false) {
             return resp.send({ erro: 'No campo Preço POR coloque apenas numeros!' })
@@ -72,6 +82,17 @@ app.post('/produto', async (req, resp) => {
         
          if(p != null ){
                 return resp.send({ erro: 'Produto ja cadastrado' })
+=======
+        
+        
+        if(chamada <= 0)
+            return resp.send({ erro: 'Coloque um numero maior que 0' })
+
+
+        
+        if(p != null && q != null){
+            return resp.send({ erro: 'Aluno ja cadastrado' })
+>>>>>>> faf8e427f6036e447a29e6b84becb8fe8acad573
         }
         
         
@@ -98,6 +119,7 @@ app.delete('/produto/:id', async (req, resp) => {
 app.put('/produto/:id', async (req, resp) => {
     try {
         let id = req.params.id;
+<<<<<<< HEAD
         let { nome, categoria, precode, precopor, avaliacao,  descricao, estoque, linkimagem } = req.body;
 
         if(nome == '' || categoria == '' || precode == '' || precopor == '' || avaliacao == '' || descricao == '' || estoque == '' || linkimagem == '') {
@@ -126,6 +148,27 @@ app.put('/produto/:id', async (req, resp) => {
 
             
         let r = await db.tb_produto.update (
+=======
+        let { nome, chamada, curso, turma } = req.body;
+
+        if(!isNaN(chamada) == false) {
+            return resp.send({ erro: 'No campo Chamada coloque apenas numeros!' })
+        } 
+        
+        if(nome == '' || chamada == '' || curso == '' || turma == '') {
+            return resp.send({ erro: 'Você esqueceu de preencher os campos' })
+        }
+        if(nome.length <= 4 || curso.length <= 4 || turma.length <= 4) {
+            return resp.send({ erro: 'Coloque mais que 4 caracteres nos campos abaixo' })
+        }
+        
+        
+        if(chamada <= 0)
+            return resp.send({ erro: 'Coloque um numero maior que 0' })
+
+
+        let r = await db.tb_matricula.update (
+>>>>>>> faf8e427f6036e447a29e6b84becb8fe8acad573
             {
                 nm_produto: nome,
                 ds_categoria: categoria,
